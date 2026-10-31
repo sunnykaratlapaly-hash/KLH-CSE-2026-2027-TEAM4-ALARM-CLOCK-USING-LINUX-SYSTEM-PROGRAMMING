@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Benchfox – Linux performance benchmarking</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>Benchfox</h1><p>Run programs side by side and compare their CPU, memory and I/O use.</p></header>
+<main>
+ <section class="panel">
+  <h2>Programs to compare</h2>
+  <div id="rows"></div>
+  <div class="bar">
+   <button id="add" class="ghost">Add program</button>
+   <label>Runs each <input id="runs" type="number" min="1" max="20" value="3"></label>
+   <button id="go">Run benchmark</button>
+  </div>
+  <p class="note">Commands run on this machine with your permissions. Use only commands you trust.</p>
+  <div id="samples"></div>
+ </section>
+ <section id="out" hidden>
+  <div id="status"></div>
+  <div id="charts"></div>
+  <div class="tablewrap"><table id="tbl"></table></div>
+  <button id="csv" class="ghost">Download CSV</button>
+ </section>
+</main>
+<script src="app.js"></script></body></html>
